@@ -1,0 +1,105 @@
+﻿<Window x:Class="Practica1_PortalVideojuegos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica1_PortalVideojuegos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <!-- Contenedor Principal -->
+        <Grid Background="#0F0F1A">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!-- ZONA SUPERIOR: CABECERA -->
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#0A0A12">
+
+                <!-- Menú central -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="TIENDA" Margin="20,0" FontWeight="Bold" FontSize="18" Foreground="#00E5FF" Cursor="Hand"/>
+                    <TextBlock Text="COMUNIDAD" Margin="20,0" FontWeight="Bold" FontSize="18" Foreground="#A0AEC0" Cursor="Hand"/>
+                    <TextBlock Text="SOPORTE" Margin="20,0" FontWeight="Bold" FontSize="18" Foreground="#A0AEC0" Cursor="Hand"/>
+                </StackPanel>
+
+                <!-- Texto de perfil a la derecha con icono -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0">
+                    <TextBlock Text="👤 mi perfil" FontSize="16" FontWeight="SemiBold" Foreground="White" Cursor="Hand"/>
+                </StackPanel>
+            </Grid>
+
+
+            <!-- ZONA LATERAL IZQUIERDA: MENÚ -->
+            <Border Grid.Row="1" Grid.Column="0" Background="#1A1A2E" CornerRadius="0,15,0,0" Margin="0,0,10,0">
+                <StackPanel VerticalAlignment="Top" Margin="0,30,0,0">
+
+                    <!-- Botón Destacados activo -->
+                    <Border Background="#00E5FF" CornerRadius="8" Margin="20,10" Padding="12" Cursor="Hand">
+                        <TextBlock Text="⭐ Destacados" HorizontalAlignment="Left" Margin="5,0,0,0" FontWeight="Bold" FontSize="16" Foreground="#0F0F1A"/>
+                    </Border>
+
+                    <!-- Botón Mis juegos -->
+                    <Border Margin="20,10" Padding="12" Cursor="Hand">
+                        <TextBlock Text="🎮 Mis juegos" HorizontalAlignment="Left" Margin="5,0,0,0" FontWeight="Bold" FontSize="16" Foreground="#A0AEC0"/>
+                    </Border>
+
+                    <!-- Botón Configuración -->
+                    <Border Margin="20,10" Padding="12" Cursor="Hand">
+                        <TextBlock Text="⚙️ Configuración" HorizontalAlignment="Left" Margin="5,0,0,0" FontWeight="Bold" FontSize="16" Foreground="#A0AEC0"/>
+                    </Border>
+
+                </StackPanel>
+            </Border>
+
+
+            <!-- ZONA CENTRAL: TARJETAS DE JUEGOS -->
+            <Grid Grid.Row="1" Grid.Column="1" Margin="10,0,20,20">
+                <!-- Título con icono -->
+                <TextBlock Text="🔥 TENDENCIAS ACTUALES" Foreground="White" FontSize="22" FontWeight="Bold" Margin="20,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <!-- Carátula Juego 1: FC27 -->
+                    <Border Width="160" Height="240" Margin="20" CornerRadius="12" BorderBrush="#3F3F5A" BorderThickness="1" Cursor="Hand">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Imagenes/fc27.jpg" Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.5"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <!-- Carátula Juego 2: Clash Royale -->
+                    <Border Width="160" Height="240" Margin="20" CornerRadius="12" BorderBrush="#3F3F5A" BorderThickness="1" Cursor="Hand">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Imagenes/clashRoyale.jpg" Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.5"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <!-- Carátula Juego 3: Rainbow Six Siege -->
+                    <Border Width="160" Height="240" Margin="20" CornerRadius="12" BorderBrush="#3F3F5A" BorderThickness="1" Cursor="Hand">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Imagenes/rainbow.jpg" Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.5"/>
+                        </Border.Effect>
+                    </Border>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
