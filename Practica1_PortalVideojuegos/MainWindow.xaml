@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica1_PortalVideojuegos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+        Title="Catálogo de Videojuegos" Height="800" Width="1200" WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- Contenedor Principal -->
         <Grid Background="#0F0F1A">
@@ -31,9 +31,34 @@
                     <TextBlock Text="SOPORTE" Margin="20,0" FontWeight="Bold" FontSize="18" Foreground="#A0AEC0" Cursor="Hand"/>
                 </StackPanel>
 
-                <!-- Texto de perfil a la derecha con icono -->
+                <!-- Texto de perfil a la derecha con icono Y BOTÓN CERRAR SESIÓN -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0">
-                    <TextBlock Text="👤 mi perfil" FontSize="16" FontWeight="SemiBold" Foreground="White" Cursor="Hand"/>
+                    <TextBlock Text="👤 mi perfil" FontSize="16" FontWeight="SemiBold" Foreground="White" Cursor="Hand" Margin="0,0,30,0" VerticalAlignment="Center"/>
+
+                    <!-- BOTÓN CERRAR SESIÓN INTEGRADO -->
+                    <Button x:Name="btnCerrarSesion" Content="CERRAR SESIÓN" Height="35" Width="140" Cursor="Hand" Click="btnCerrarSesion_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FF4C4C"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF1A1A"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </StackPanel>
             </Grid>
 
@@ -61,40 +86,40 @@
             </Border>
 
 
-            <!-- ZONA CENTRAL: TARJETAS DE JUEGOS -->
+            <!-- ZONA CENTRAL: TARJETAS DE JUEGOS AUMENTADAS -->
             <Grid Grid.Row="1" Grid.Column="1" Margin="10,0,20,20">
-                <!-- Título con icono -->
-                <TextBlock Text="🔥 TENDENCIAS ACTUALES" Foreground="White" FontSize="22" FontWeight="Bold" Margin="20,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <!-- Título con icono adaptado en tamaño -->
+                <TextBlock Text="🔥 TENDENCIAS ACTUALES" Foreground="White" FontSize="26" FontWeight="Black" Margin="20,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                     <!-- Carátula Juego 1: FC27 -->
-                    <Border Width="160" Height="240" Margin="20" CornerRadius="12" BorderBrush="#3F3F5A" BorderThickness="1" Cursor="Hand">
+                    <Border Width="260" Height="380" Margin="20" CornerRadius="15" BorderBrush="#3F3F5A" BorderThickness="2" Cursor="Hand">
                         <Border.Background>
                             <ImageBrush ImageSource="/Imagenes/fc27.jpg" Stretch="UniformToFill"/>
                         </Border.Background>
                         <Border.Effect>
-                            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.5"/>
+                            <DropShadowEffect Color="Black" BlurRadius="20" ShadowDepth="8" Opacity="0.6"/>
                         </Border.Effect>
                     </Border>
 
                     <!-- Carátula Juego 2: Clash Royale -->
-                    <Border Width="160" Height="240" Margin="20" CornerRadius="12" BorderBrush="#3F3F5A" BorderThickness="1" Cursor="Hand">
+                    <Border Width="260" Height="380" Margin="20" CornerRadius="15" BorderBrush="#3F3F5A" BorderThickness="2" Cursor="Hand">
                         <Border.Background>
                             <ImageBrush ImageSource="/Imagenes/clashRoyale.jpg" Stretch="UniformToFill"/>
                         </Border.Background>
                         <Border.Effect>
-                            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.5"/>
+                            <DropShadowEffect Color="Black" BlurRadius="20" ShadowDepth="8" Opacity="0.6"/>
                         </Border.Effect>
                     </Border>
 
                     <!-- Carátula Juego 3: Rainbow Six Siege -->
-                    <Border Width="160" Height="240" Margin="20" CornerRadius="12" BorderBrush="#3F3F5A" BorderThickness="1" Cursor="Hand">
+                    <Border Width="260" Height="380" Margin="20" CornerRadius="15" BorderBrush="#3F3F5A" BorderThickness="2" Cursor="Hand">
                         <Border.Background>
                             <ImageBrush ImageSource="/Imagenes/rainbow.jpg" Stretch="UniformToFill"/>
                         </Border.Background>
                         <Border.Effect>
-                            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.5"/>
+                            <DropShadowEffect Color="Black" BlurRadius="20" ShadowDepth="8" Opacity="0.6"/>
                         </Border.Effect>
                     </Border>
 

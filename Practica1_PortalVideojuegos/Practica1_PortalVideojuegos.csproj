@@ -2,10 +2,23 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <BaseOutputPath>C:\TempWPF</BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Imagenes\clashRoyale.jpg" />
+    <None Remove="Imagenes\fc27.jpg" />
+    <None Remove="Imagenes\rainbow.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagenes\clashRoyale.jpg" />
+    <Resource Include="Imagenes\fc27.jpg" />
+    <Resource Include="Imagenes\rainbow.jpg" />
+  </ItemGroup>
 
 </Project>
